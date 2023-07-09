@@ -64,19 +64,12 @@ android {
 
     buildFeatures {
         compose true
-        buildConfig true
     }
 
     sourceSets {
         test.assets.srcDirs += files("$projectDir/schemas".toString())
     }
 
-    configurations.all {
-        resolutionStrategy {
-            force 'org.xerial:sqlite-jdbc:3.34.0'
-        }
-    }
-    
     testOptions {
         unitTests {
             includeAndroidResources = true
